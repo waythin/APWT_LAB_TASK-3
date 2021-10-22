@@ -127,7 +127,7 @@ class JuserController extends Controller
     
         );
 
-        $var = new Juser();
+        $var = juser::where('email',$request->email)->first();
         $var->name = $request->name;
         $var->email = $request->email;
         $var->phone = $request->phone;
@@ -137,7 +137,8 @@ class JuserController extends Controller
         $var->password= $request->password_confirmation;
         $var->save();
 
-        return redirect()->route('udash');
+       
+         return redirect()->route('udash');
     }
 
 
