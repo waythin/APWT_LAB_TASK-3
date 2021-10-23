@@ -28,7 +28,7 @@ class JuserController extends Controller
             'gender'=>'required',
             'dob'=>'required',
             'jobxp'=>'required',
-            'password'=>'required|confirmed|min:5|max:15',
+            'password'=>'required|min:5|max:15|confirmed',
             'password_confirmation'=>'required'
         ],
 
@@ -64,16 +64,10 @@ class JuserController extends Controller
         $var->password= $request->password_confirmation;
         $var->save();
 
-        return 'Registration Successful!';
-        // return redirect()->route('udash');
+        // return 'Registration Successful!';
+        return redirect()->route('udash');
     }
 
-    // public function userProfile(){
-    //     $jusers = Juser::where('email',Session()->get('user'))->first();
-
-    //     return(jusers->email);
-    //     //return view('pages.uprofile')->with('jusers', $jusers);
-    // }
 
 
     public function userDash(){

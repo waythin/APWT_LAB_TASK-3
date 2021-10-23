@@ -21,8 +21,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="{{route('registration') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      
-      
+      <li><a href="{{route('adminReg') }}"><span class="glyphicon glyphicon-user"></span> Sign Up A</a></li>
 
 
       <li><a href="{{route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
