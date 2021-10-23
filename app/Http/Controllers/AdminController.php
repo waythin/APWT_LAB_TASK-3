@@ -99,6 +99,6 @@ class AdminController extends Controller
         $var->save();
 
         
-        return redirect()->route('udash');
+        return redirect()->route('adash');
     }
 }

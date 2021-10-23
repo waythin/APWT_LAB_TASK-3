@@ -17,7 +17,11 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="{{route('dash') }}">DASHBOARD</a></li>
-      <!-- <li><a href="#">Page 2</a></li> -->
+      @if(Session::has('admin'))
+      <li class="active"><a href="{{route('list') }}">USER LIST</a></li>
+      @endif
+
+     
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="{{route('registration') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

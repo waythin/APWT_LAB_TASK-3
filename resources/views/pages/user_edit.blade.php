@@ -89,7 +89,7 @@ a {
   {{csrf_field()}}
 
   <div class="container,login-block">
-    <h3>Create An Account</h3>
+    <h3>Edit User Profile</h3>
     <hr>
 
     <label for="name"><b>Name</b></label><br>

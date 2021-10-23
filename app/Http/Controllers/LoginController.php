@@ -34,10 +34,7 @@ class LoginController extends Controller
 
         else if($admin){
             $request->session()->put('admin',$admin->email);
-            return redirect()->route('udash');
-        }
-        else{
-            return("Enter a valid Email or Password!");
+            return redirect()->route('adash');
         }
         
         $this->validate($request,

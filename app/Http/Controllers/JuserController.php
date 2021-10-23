@@ -136,6 +136,19 @@ class JuserController extends Controller
     }
 
 
+    public function userList(){
+        $jusers = juser::all();
+        return view('pages.user_list')->with('jusers', $jusers);
+    }
+
+
+    public function userDelete(Request $request){
+        $var = juser::where('id',$request->id)->first();
+        $var->delete();
+        return redirect()->route('list');
+    }
+
+
 
 
   

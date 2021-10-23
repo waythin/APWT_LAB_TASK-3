@@ -89,25 +89,25 @@ a {
   {{csrf_field()}}
 
   <div class="container,login-block">
-    <h3>Create An Account</h3>
+    <h3>Edit Admin Profile</h3>
     <hr>
 
     <label for="username"><b>Username</b></label><br>
-    <input type="text" placeholder="Enter your Username" name="username" id="username" >
+    <input type="text" placeholder="Enter your Username" name="username" id="username" value="{{$admin->username}}">
     @error('username')
     <span class="textred"> {{$message}}</span>
     @enderror
     <br>
 
     <label for="email"><b>Email</b></label><br>
-    <input type="text" placeholder="Enter your Email" name="email" id="email" >
+    <input type="text" placeholder="Enter your Email" name="email" id="email" value="{{$admin->email}}">
     @error('email')
     <span class="textred"> {{$message}}</span>
     @enderror
     <br>
 
     <label for="phone"><b>Phone Number</b></label><br>
-    <input type="text" placeholder="Enter your phone number" name="phone" id="phone" >
+    <input type="text" placeholder="Enter your phone number" name="phone" id="phone" value="{{$admin->phone}}">
     @error('phone')
     <span class="textred"> {{$message}}</span>
     @enderror
@@ -115,14 +115,14 @@ a {
 
 
     <label for="password"><b>Password</b></label><br>
-    <input type="password" placeholder="Enter Password" name="password" id="password" >
+    <input type="password" placeholder="Enter Password" name="password" id="password" value="{{$admin->password}}">
     @error('password')
     <span class="textred"> {{$message}}</span>
     @enderror
     <br>
 
     <label for="password_confirmation"><b>Confirm Password</b></label><br>
-    <input type="password" placeholder="Confirm Password" name="password_confirmation" id="password_confirmation" >
+    <input type="password" placeholder="Confirm Password" name="password_confirmation" id="password_confirmation" value="{{$admin->password}}">
     @error('password_confirmation')
     <span class="textred"> {{$message}}</span>
     @enderror

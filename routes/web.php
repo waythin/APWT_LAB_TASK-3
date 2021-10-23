@@ -30,6 +30,8 @@ Route::get('/registration',[JuserController::class, 'registration'])->name('regi
 Route::post('/registraiton',[JuserController::class, 'registrationS'])->name('registrationS');
 Route::get('/user/edit/{id}/{email}',[JuserController::class, 'userEdit'])->name('useredit');
 Route::post('/user/edit',[JuserController::class, 'userEditS'])->name('useredit');
+Route::get('/user/delete/{id}/{email}',[JuserController::class, 'userDelete']);
+Route::get('/user/list',[JuserController::class, 'userList'])->name('list');
 Route::get('/user/dash',[JuserController::class,'userDash'])->name('udash')->middleware('UserAuth');
 
 //admin
